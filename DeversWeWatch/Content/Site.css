@@ -16,3 +16,14 @@ textarea {
     max-width: 280px;
 }
 
+
+*{
+	color: black;
+	font-family: "Verdana";
+	margin-left: 5px;
+	
+}
+
+.textbox{
+	border: 2px solid grey;
+}
