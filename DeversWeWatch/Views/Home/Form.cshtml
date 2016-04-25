@@ -1,132 +1,103 @@
 ﻿
-    <link rel="stylesheet" type="text/css" href="~/Content/Site.css">
+<link rel="stylesheet" type="text/css" href="~/Content/Site.css">
 
+@model DeversWeWatch.Models.ReportModel
 
-    <title>We:Watch</title>
+<h3>Gör en anmälan</h3>
 
+@using (Html.BeginForm("Form", "Home", FormMethod.Post, new { @class = "form-horizontal" }))
+{
 
-    <h3>Gör en anmälan</h3>
-
-    <div class="container-fluid">
-        <form action="" method="get" id="reportForm" class="form-horizontal">
-
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-md-6">
-                        <label for="fornamn">Förnamn</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <input type=text class="textbox" value="" name="fornamn" id="fornamn">
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-md-6">
-                        <label for="efternamn">Efternamn</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <input type=text class="textbox" value="" name="efternamn" id="efternamn">
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-md-6">
-                        <label for="email">Email</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <input type=email class="textbox" value="" name="email" id="email">
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-group">
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <label for="telefonnummer">Telefonnummer</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <input type=text class="textbox" value="" name="telefonnummer" id="telefonnnummer">
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-group">
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <label for="personnummer">Personnnummer</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <input type=text class="textbox" value="" name="personnummer" id="personnummer">
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-md-6">
-                        <label for="adress">Adress</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <input type=text class="textbox" value="" name="adress" id="adress">
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-group">
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <label for="datum">Datum för händelse</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <input type=datetime-local class="textbox" value="" name="datum" id="datum">
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-md-6">
-                        <label for="meddelande">Meddelande</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <textarea name="meddelande" class="textbox" id="meddelande" form="reportForm"></textarea>
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-md-6">
-
-                        <input type="submit" value="Skicka in anmälan" name="submit">
-                    </div>
-                </div>
-            </div>
-
-        </form>
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.Förnamn, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.Förnamn, new { @class = "form-control", @placeholder = "Skriv ditt förnamn här" })
+        </div>
     </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Efternamn, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.Efternamn, new { @class = "form-control", @placeholder = "Skriv ditt efternamn här" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Email, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @placeholder = "Skriv din email här" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Telefonnummer, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.Telefonnummer, new { @class = "form-control", @placeholder = "Skriv ditt telefonnummer här" })
+        </div>
+    </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Personnummer, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Personnummer, new { @class = "form-control", @placeholder= "Skriv ditt personnummer här" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Datum, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Datum, new { @class = "form-control", @type = "datetime-local" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Plats_Adress, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Plats_Adress, new { @class = "form-control", @placeholder = "Skriv din adress här" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Kategori, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+
+                @Html.RadioButtonFor(model => model.Kategori, new { @class = "form-control", @id = "ValVandalism" })
+                @Html.Label("ValVandalism", "Vandalism")
+
+                @Html.RadioButtonFor(model => model.Kategori, new { @class = "form-control", @id = "ValAvvikandeBeteende" })
+                @Html.Label("ValAvvikandeBeteende", "Avvikande beteende")
+
+
+                @Html.RadioButtonFor(model => model.Kategori, new { @class = "form-control", @id = "ValBrak" })
+                @Html.Label("ValBrak", "Bråk")
+
+                @Html.RadioButtonFor(model => model.Kategori, new { @class = "form-control", @id = "ValRoadkill" })
+                @Html.Label("ValRoadKill", "Roadkill")
+
+
+
+                @Html.RadioButtonFor(model => model.Kategori, new { @class = "form-control", @id = "ValAnnat" })
+                @Html.Label("ValAnnat", "Annat")
+
+
+                @Html.TextBoxFor(model => model.Kategori, new { @class = "form-control" })
+            </div>
+        </div>
+           
+            <div class="form-group">
+                @Html.LabelFor(model => model.Meddelande, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextAreaFor(model => model.Meddelande, new { @class = "form-control", @placeholder = "Skriv ett meddelande här" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" class="btn btn-success" value="Skicka in anmälan" />
+                </div>
+            </div>
+}
 
 
 
