@@ -27,3 +27,28 @@ textarea {
 .textbox{
 	border: 2px solid grey;
 }
+
+.divStart{
+    background-color: lightgray;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.kolumnRubrik{
+    background-color: gray;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 40px;
+    height: 100px;
+}
+
+.kolumnText{
+    background-color: lightgray;
+    font-size: 14px;
+    padding: 20px;
+    height: 500px;
+}
