@@ -15,25 +15,6 @@ namespace DeversWeWatch.Controllers
         {
             return View();
         }
-       [HttpPost]
-       public ActionResult Index(ReportModel modelInput)
-        {
-            var report = new ReportModel()
-            {
-                Datum = modelInput.Datum,
-                Efternamn = modelInput.Efternamn,
-                Email = modelInput.Email,
-                Förnamn = modelInput.Förnamn,
-                Kategori = modelInput.Kategori,
-                Meddelande = modelInput.Meddelande,
-                Personnummer = modelInput.Personnummer,
-                Plats_Adress = modelInput.Plats_Adress,
-                Telefonnummer = modelInput.Telefonnummer
-            };
-            
-            context.Report.Add(report);
-            context.SaveChanges();
-            return View();
-        }
+      
     }
 }

@@ -23,9 +23,7 @@ namespace DeversWeWatch.Models
 
         [StringLength(50)]
         public string Telefonnummer { get; set; }
-
-        [RegularExpression(@"[0-9{6}]-[0-9]{4}", ErrorMessage = "Måste vara korrekt inskrivet [XXXXXX-XXXX]")]
-        [StringLength(10, MinimumLength = 10)]
+        
         public string Personnummer { get; set; }
 
         [Required]

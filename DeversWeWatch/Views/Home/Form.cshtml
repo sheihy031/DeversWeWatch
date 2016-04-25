@@ -5,7 +5,7 @@
 
 <h3>Gör en anmälan</h3>
 
-@using (Html.BeginForm("Index", "Form", FormMethod.Post, new { @class = "form-horizontal" }))
+@using (Html.BeginForm("Form", "Home", FormMethod.Post, new { @class = "form-horizontal" }))
 {
 
     @Html.ValidationSummary("", new { @class = "text-danger" })
