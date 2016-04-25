@@ -15,5 +15,10 @@ namespace DeversWeWatch.Controllers
             context.Database.Initialize(true);
             return View();
         }
+
+        public ActionResult Form()
+        {
+            return View();
+        }
     }
 }
