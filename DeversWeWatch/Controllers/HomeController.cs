@@ -11,6 +11,13 @@ namespace DeversWeWatch.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            ReportContext context = new ReportContext();
+            context.Database.Initialize(true);
+            return View();
+        }
+
+        public ActionResult Form()
+        {
             return View();
         }
     }
