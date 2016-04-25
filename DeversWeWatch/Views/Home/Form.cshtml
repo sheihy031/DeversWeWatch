@@ -12,35 +12,35 @@
     <div class="form-group">
         @Html.LabelFor(model => model.Förnamn, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.TextBoxFor(model => model.Förnamn, new { @class = "form-control" })
+            @Html.TextBoxFor(model => model.Förnamn, new { @class = "form-control", @placeholder = "Skriv ditt förnamn här" })
         </div>
     </div>
 
     <div class="form-group">
         @Html.LabelFor(model => model.Efternamn, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.TextBoxFor(model => model.Efternamn, new { @class = "form-control" })
+            @Html.TextBoxFor(model => model.Efternamn, new { @class = "form-control", @placeholder = "Skriv ditt efternamn här" })
         </div>
     </div>
 
     <div class="form-group">
         @Html.LabelFor(model => model.Email, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+            @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @placeholder = "Skriv din email här" })
         </div>
     </div>
 
     <div class="form-group">
         @Html.LabelFor(model => model.Telefonnummer, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.TextBoxFor(model => model.Telefonnummer, new { @class = "form-control" })
+            @Html.TextBoxFor(model => model.Telefonnummer, new { @class = "form-control", @placeholder = "Skriv ditt telefonnummer här" })
         </div>
     </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.Personnummer, new { @class = "col-md-2 control-label" })
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.Personnummer, new { @class = "form-control" })
+                @Html.TextBoxFor(model => model.Personnummer, new { @class = "form-control", @placeholder= "Skriv ditt personnummer här" })
             </div>
         </div>
 
@@ -54,7 +54,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Plats_Adress, new { @class = "col-md-2 control-label" })
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.Plats_Adress, new { @class = "form-control" })
+                @Html.TextBoxFor(model => model.Plats_Adress, new { @class = "form-control", @placeholder = "Skriv din adress här" })
             </div>
         </div>
 
@@ -83,7 +83,7 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.Meddelande, new { @class = "col-md-2 control-label" })
                 <div class="col-md-10">
-                    @Html.TextAreaFor(model => model.Meddelande, new { @class = "form-control" })
+                    @Html.TextAreaFor(model => model.Meddelande, new { @class = "form-control", @placeholder = "Skriv ett meddelande här" })
                 </div>
             </div>
 
