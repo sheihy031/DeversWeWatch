@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using System.Data.Entity;
 
 namespace DeversWeWatch
 {
@@ -13,6 +14,8 @@ namespace DeversWeWatch
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            Database.SetInitializer<ReportContext>(null);
         }
     }
 }
