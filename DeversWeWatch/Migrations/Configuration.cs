@@ -10,7 +10,6 @@ namespace DeversWeWatch.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "DeversWeWatch.ReportContext";
         }
 
         protected override void Seed(DeversWeWatch.ReportContext context)

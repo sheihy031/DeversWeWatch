@@ -119,13 +119,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201604221345301_InitialCreate.cs" />
-    <Compile Include="Migrations\201604221345301_InitialCreate.Designer.cs">
-      <DependentUpon>201604221345301_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604250816566_Lade till begränsningar.cs" />
-    <Compile Include="Migrations\201604250816566_Lade till begränsningar.Designer.cs">
-      <DependentUpon>201604250816566_Lade till begränsningar.cs</DependentUpon>
+    <Compile Include="Migrations\201604251324257_initial_create.cs" />
+    <Compile Include="Migrations\201604251324257_initial_create.Designer.cs">
+      <DependentUpon>201604251324257_initial_create.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ReportModel.cs" />
@@ -155,19 +151,8 @@
     <Folder Include="Views\Form\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201604221345301_InitialCreate.resx">
-      <DependentUpon>201604221345301_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604250816566_Lade till begränsningar.resx">
-      <DependentUpon>201604250816566_Lade till begränsningar.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201604221345301_InitialCreate.resx">
-      <DependentUpon>201604221345301_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604250816566_Lade till begränsningar.resx">
-      <DependentUpon>201604250816566_Lade till begränsningar.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201604251324257_initial_create.resx">
+      <DependentUpon>201604251324257_initial_create.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
