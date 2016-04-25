@@ -61,6 +61,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Kategori, new { @class = "col-md-2 control-label" })
             <div class="col-md-10">
+
                 @Html.RadioButtonFor(model => model.Kategori, new { @class = "form-control", @id = "ValVandalism" })
                 @Html.Label("ValVandalism", "Vandalism")
 
@@ -74,8 +75,12 @@
                 @Html.RadioButtonFor(model => model.Kategori, new { @class = "form-control", @id = "ValRoadkill" })
                 @Html.Label("ValRoadKill", "Roadkill")
 
+
+
                 @Html.RadioButtonFor(model => model.Kategori, new { @class = "form-control", @id = "ValAnnat" })
                 @Html.Label("ValAnnat", "Annat")
+
+
                 @Html.TextBoxFor(model => model.Kategori, new { @class = "form-control" })
             </div>
         </div>
