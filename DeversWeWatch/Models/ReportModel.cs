@@ -18,9 +18,10 @@ namespace DeversWeWatch.Models
         [StringLength(50)]
         public string Efternamn { get; set; }
 
-        [RegularExpression(@"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}", ErrorMessage ="Måste vara en korrekt mail")]
+        [RegularExpression(@"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}", ErrorMessage ="Måste vara en korrekt mail"), StringLength(75)]
         public string Email { get; set; }
 
+        [StringLength(50)]
         public string Telefonnummer { get; set; }
 
         [RegularExpression(@"[0-9{6}]-[0-9]{4}", ErrorMessage = "Måste vara korrekt inskrivet [XXXXXX-XXXX]")]
@@ -30,13 +31,13 @@ namespace DeversWeWatch.Models
         [Required]
         public DateTime Datum { get; set; }
 
-        [Required]
+        [Required, StringLength(50)]
         public string Plats_Adress { get; set; }
 
         [Required]
         public Kategorier Kategori { get; set; }
 
-        [Required]
+        [Required, StringLength(128)]
         public string Meddelande { get; set; }
     }
 }
