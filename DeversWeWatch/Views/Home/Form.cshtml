@@ -1,5 +1,5 @@
 ﻿
-<link rel="stylesheet" type="text/css" href="~/Content/Site.css">
+@*<link rel="stylesheet" type="text/css" href="~/Content/Site.css">
 
 @model DeversWeWatch.Models.ReportModel
 
@@ -65,10 +65,10 @@
                 @Html.ValidationMessageFor(model => model.Kategori, "", new { @class = "text-danger" })
 
 
-                @*@Html.TextBox("annanKategori", null, new { @class = "form-control" })*@                
+                @Html.TextBox("annanKategori", null, new { @class = "form-control" })*           
                 
-            </div>
-        </div>
+            @*</div>
+        </div>@
 
 
 
@@ -83,5 +83,5 @@
                 <div class="col-md-offset-2 col-md-10">
                     <input type="submit" class="btn btn-success" value="Skicka in anmälan" />
                 </div>
-            </div>
-                    }
+            </div>*@
+                    
